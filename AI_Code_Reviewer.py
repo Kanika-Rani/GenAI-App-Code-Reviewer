@@ -2,9 +2,11 @@ import streamlit as st
 import google.generativeai as genai
 
 # Load the API key from the file
-with open("E:/Seed/projkey.txt") as f:
-    key = f.read().strip()
-    
+# with open("E:/Seed/projkey.txt") as f:
+#     key = f.read().strip()
+import os
+key = os.getenv("GOOGLE_API_KEY")
+
 
 # Configure your API key
 genai.configure(api_key=key)
